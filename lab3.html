@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>jQuery.fn.display = function() {
+        return this.each(function() {
+            alert("element: " + $(this).prop("tagName"));
+        });
+    };
+    
+        $(document).ready(function(){
+            $("#hide_btn").click(function(){
+                $("h1").hide();
+            });
+            $("#show_btn").click(function(){
+                $("h1").show();
+            });
+        });
+    </script>
+</head>
+<body>
+<h1 style="background-color: red;">
+<b>
+On clicking the "Hide heading" button, I will disappear.
+</b>
+</h1>
+<button id="hide_btn">Hide heading</button>
+<button id="show_btn">Show heading</button>
+</body>
+</html>
